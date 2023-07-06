@@ -69,7 +69,7 @@
                                             <tr>
                                                 <td>{{ $item->id }}</td>
                                                 <td>{{ $item->title }}</td>
-                                                <td><img src="{{ asset('storage/'. $item->images) }}" alt="" style="width: 100px" class="img-thumbnail"></td>
+                                                <td><img src="{{ asset('storage/'. $item->images) }}" alt="" style="width: 100px" class="img-thumbnail img-fluid"></td>
                                                 <td>{{ $item->Category->name }}</td>
                                                 <td>{{ $item->duration }}</td>
                                                 <td>{{ $item->type->name }}</td>

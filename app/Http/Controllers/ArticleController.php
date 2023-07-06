@@ -16,7 +16,7 @@ class ArticleController extends Controller
         $items = Article::paginate(7);
 
         return view('pages.admin.artikel.index', [
-            'items' => $items
+            'items' => $items,
         ]);
     }
 
@@ -76,8 +76,6 @@ class ArticleController extends Controller
             'bahan'=>$request->bahan,
             'langkah_langkah'=>$request->langkah_langkah
         ]);
-
-        // dd($request->$postData);
 
         return redirect()->route('artikel.index')->with('success', 'Posting data berhasil');
     }

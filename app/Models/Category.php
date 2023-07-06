@@ -13,4 +13,9 @@ class Category extends Model
     public function article(){
         return $this->hasMany(Article::class);
     }
+
+    public function count(){
+        $count = Category::count();
+        return $count; 
+    }
 }

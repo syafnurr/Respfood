@@ -18,7 +18,7 @@
                             <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
                             <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
                         </svg>
-                        <small class="ms-1" style="font-size: small">{{ $item->duration }}</small>
+                        <small class="ms-1" style="font-size: small">{{ $item->duration }} Menit</small>
                     </p>
                 </div>
                 <div class="col-2">
@@ -56,7 +56,8 @@
         <h4 class="mt-4 ps-3">Video Pembuatan</h4>
         <div class="ms-3 mb-6">
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ Str::limit($item->link_video, -11) }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ getYoutubeVideoId($item->link_video) }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!-- <iframe width="560" height="315" src="{{ $item->link_video }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
             
         </div>
     </div>

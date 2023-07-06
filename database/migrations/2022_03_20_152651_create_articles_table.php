@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('deskripsi');
             $table->string('duration');
             $table->longText('alat');
-            $table->string('link');
+            $table->string('link_video');
             $table->longText('bahan');
             $table->longText('langkah_langkah');
             $table->softDeletes();

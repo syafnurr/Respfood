@@ -10,12 +10,11 @@
                     <div class="col-md-3 position-relative">
                         <div class="p-3 text-center">
                             <h2 class="text-gradient text-primary">
-                                <span id="state1" countTo="117">0</span>+
+                                <span id="state1" countTo="{{ $resep_makanan }}">{{ $resep_makanan }}</span>+
                             </h2>
                             <h6 class="mt-2">Resep Makanan</h6>
                             <p class="text-sm font-weight-normal">
-                                From buttons, to inputs, navbars, alerts or cards, you are
-                                covered
+                                Dapatkan resep makanan terbaik disini
                             </p>
                         </div>
                         <hr class="vertical dark" />
@@ -23,12 +22,12 @@
                     <div class="col-md-3 position-relative">
                         <div class="p-3 text-center">
                             <h2 class="text-gradient text-primary">
-                                <span id="state2" countTo="74">0</span>+
+                                <span id="state2" countTo="{{ $resep_minuman }}">{{ $resep_minuman }}</span>+
                             </h2>
                             <h6 class="mt-2">Resep Minuman</h6>
                             <p class="text-sm font-weight-normal">
-                                From buttons, to inputs, navbars, alerts or cards, you are
-                                covered
+                                Dapatkan resep minuman terbaik disini
+                            </p>
                             </p>
                         </div>
                         <hr class="vertical dark" />
@@ -36,12 +35,11 @@
                     <div class="col-md-3 position-relative">
                         <div class="p-3 text-center">
                             <h2 class="text-gradient text-primary">
-                                <span id="state3" countTo="95">0</span>+
+                                <span id="state3" countTo="{{ $resep_tradisional }}">{{ $resep_tradisional }}</span>+
                             </h2>
                             <h6 class="mt-2">Resep Tradisional</h6>
                             <p class="text-sm font-weight-normal">
-                                From buttons, to inputs, navbars, alerts or cards, you are
-                                covered
+                                Dapatkan resep tradisional terbaik disini
                             </p>
                         </div>
                         <hr class="vertical dark" />
@@ -49,12 +47,11 @@
                     <div class="col-md-3 position-relative">
                         <div class="p-3 text-center">
                             <h2 class="text-gradient text-primary">
-                                <span id="state4" countTo="114">0</span>+
+                                <span id="state4" countTo="{{ $resep_modern }}">{{ $resep_modern }}</span>+
                             </h2>
                             <h6 class="mt-2">Resep Modern</h6>
                             <p class="text-sm font-weight-normal">
-                                From buttons, to inputs, navbars, alerts or cards, you are
-                                covered
+                                Dapatkan resep modern terbaik disini
                             </p>
                         </div>
                         <hr class="vertical dark" />
@@ -78,15 +75,14 @@
 
                         <a href="{{ route('detail', $item->title) }}">
                             <div class="p-3 text-center">
-                                <!-- <div class="col-lg-3 mt-2" data-aos="fade-up" data-aos-duration="500"> -->
                                 <div class="" style="width: 18rem">
                                     <div class="position-absolute bg-dark px-3 py-2 rounded">
                                         <a href="{{ route('detail', $item->title) }}" class="text-white text-decoration-none">
                                             <small>{{ $item->type->name }}</small></a>
                                     </div>
                                     <div class="gambar">
-                                        <!-- <img src="{{ url('frontend/assets/img/background2.jpg') }}" class="card-img-top rounded" style="height: 11rem" /> -->
-                                        <img src="{{ asset('storage/'. $item->images) }}" class="card-img-top rounded" style="height: 11rem" />
+                                        <img src="{{ asset('storage/'. $item->images) }}" class="rounded img-fluid" style="height: 11rem" />
+                                        <!-- <img src="{{ ('/storage/'. $item->images) }}" class="card-img-top rounded" style="height: 11rem" /> -->
 
                                     </div>
                                     <h5 class="card-title text-start mt-2" style="color: black;">{{ $item->title }}</h5>
@@ -95,7 +91,7 @@
                                             <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
                                             <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
                                         </svg>
-                                        <small class="ms-1">{{ $item->duration }}</small>
+                                        <small class="ms-1">{{ $item->duration }} Menit</small>
                                     </p>
                                 </div>
                                 <!-- </div> -->
@@ -124,7 +120,7 @@
                     <div class="zoom shadow">
                         <div class="row">
                             <div class="col-3 rounded">
-                                <img src="{{ asset('storage/'. $item->images) }}" height="250px" width="100%" alt="" class="p-4 thumbnail1 mx-auto d-block" />
+                                <img src="{{ asset('storage/'. $item->images) }}" height="250px" width="100%" alt="" class="p-4 thumbnail1 mx-auto d-block img-fluid" />
                             </div>
                             <h4 class="col-9 mt-5 text-start">
                                 <!-- <h5>Rendang</h5> -->
@@ -142,7 +138,7 @@
                                                         <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
                                                         <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
                                                     </svg>
-                                                    <small class="ms-1">{{ $item->duration }}</small></small>
+                                                    <small class="ms-1">{{ $item->duration }} Menit</small></small>
                                             </p>
                                         </div>
                                     </div>
